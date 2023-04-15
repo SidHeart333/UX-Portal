@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="152.916" viewBox="0 0 1120 152.916">
+    <defs>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}.cls-2{fill:#fff}.cls-3{filter:url(#Path_499)}
+        </style>
+        <linearGradient id="linear-gradient" x1=".99" x2=".015" y2=".1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#d5d5d5"/>
+            <stop offset=".32" stop-color="#bcbcbc"/>
+            <stop offset=".537" stop-color="#c6c5c5"/>
+            <stop offset=".734" stop-color="#c6c5c5"/>
+            <stop offset="1" stop-color="#bfbfbf"/>
+        </linearGradient>
+        <filter id="Path_499" width="1120" height="119.916" x="0" y="33" filterUnits="userSpaceOnUse">
+            <feOffset dy="15"/>
+            <feGaussianBlur result="blur" stdDeviation="10"/>
+            <feFlood flood-color="#e60012" flood-opacity=".4"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Turn_Table" data-name="Turn Table" transform="translate(-387 -890)">
+        <g class="cls-3" transform="translate(387 890)">
+            <path id="Path_499-2" d="M0 17h1054l3 10s-36 50.383-530.7 49.912S-3 27-3 27z" class="cls-1" data-name="Path 499" transform="translate(33 31)"/>
+        </g>
+        <ellipse id="Ellipse_20" cx="527" cy="49.5" class="cls-2" data-name="Ellipse 20" rx="527" ry="49.5" transform="translate(420 890)"/>
+    </g>
+</svg>

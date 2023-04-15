@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="418" height="359" viewBox="0 0 418 359">
+  <g id="design-circles" transform="translate(-749 -423)">
+    <g id="Ellipse_17" data-name="Ellipse 17" transform="translate(758 442)" fill="none" stroke="#ffe5d9" stroke-width="2">
+      <circle cx="161" cy="161" r="161" stroke="none"/>
+      <circle cx="161" cy="161" r="160" fill="none"/>
+    </g>
+    <g id="Ellipse_18" data-name="Ellipse 18" transform="translate(749 442)" fill="none" stroke="#ffe5d9" stroke-width="2">
+      <circle cx="170" cy="170" r="170" stroke="none"/>
+      <circle cx="170" cy="170" r="169" fill="none"/>
+    </g>
+    <circle id="Ellipse_19" data-name="Ellipse 19" cx="161.5" cy="161.5" r="161.5" transform="translate(758 423)" fill="#f0f6ff"/>
+    <circle id="Ellipse_20" data-name="Ellipse 20" cx="120" cy="120" r="120" transform="translate(927 483)" fill="#e6e8ff"/>
+  </g>
+</svg>
