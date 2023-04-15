@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <title>UX Portal</title>
+</head>
+
+<body id="touchsurface">
+    <nav class="navbar">
+        <a href="index.html"><img src="images/logo-new3.svg" class="ux-logo"></a>
+        <ul class="topNav" id="myTopNav">
+            <li><a href="index.html#360" id="listNav">360° View</a></li>
+            <li><a href="factory.html">The Factory</a></li>
+            <li><a href="showroom.html">Showroom</a></li>
+            <!-- <li><a href="crew.html">The Crew</a></li> -->
+            <li><a href="form.html" class="active">Request UX</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars" style="color: #FFFFFF;"></i></a></li>
+        </ul>
+    </nav>
+
+    <img src="images/Element01.svg" class="element1">
+    <img src="images/Element02.svg" class="element2">
+
+    <div class="swiper-container">
+        <div class="header-container">
+            <h1 class="heading">Request UX Engagement</h1>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="form-container">
+                    <div class="form-left">
+                        <form autocomplete="off" onsubmit="event.preventDefault();document.getElementsByClassName('swiper-button-next')[0].click()">
+                            <div class="form-ele form-ele-res" style="left:8%;width:70%; display:inline-flex">
+                                <input required class="inputs" type="text" name="r-email" onchange="checkFilled()">
+                                <label style="left: 0%" for="r-email">Requester email id</label>
+                            </div>
+                            <div class="form-ele form-ele-res" style="right:3%; width:26%; display:inline-flex">
+                                <input required class="inputs" type="text" name="dept-name" onchange="checkFilled()">
+                                <label style="left: 0%" for="dept-name">IB/CoE Name</label>
+                            </div>
+                            <div class="form-ele">
+                                <input required class="inputs" type="text" name="project-name" onchange="checkFilled()">
+                                <label for="project-name">Project Name</label>
+                            </div>
+                            <div class="form-ele">
+                                <textarea required class="inputs" name="description" onchange="checkFilled()"></textarea>
+                                <label for="description">Project Description</label>
+                            </div>
+                            <div class="form-ele">
+                                <input required class="inputs" type="text" name="target-users" onchange="checkFilled()">
+                                <label for="target-users">Target Users</label>
+                            </div>
+                            <div class="form-ele">
+                                <input required class="inputs" type="text" name="tech-platform" onchange="checkFilled()">
+                                <label for="tech-platform">Technology / Platform</label>
+                            </div>
+                            <div style="position: relative">
+                                <div class="form-ele form-ele-res" style="width:44%; display:inline-block;"> 
+                                    <input required class="inputs" type="date" name="start-date" value="2019-04-01">
+                                    <label for="start-date ">Start Date (Tentative)</label>
+                                </div>
+                                <div class="form-ele form-ele-res date-res" style="width:44%; display:inline-block">
+                                    <input required class="inputs" type="date" name="end-date" value="2020-03-31">
+                                    <label for="end-date">End Date (Tentative)</label>
+                                </div>
+                            </div>
+                            <button id="btn1" class="nxt-btn nxt-grey">Next</button>
+                        </form>
+                    </div>
+                    <div class="illustration-right">
+                        <img class="illustration" src="images/illustration.svg">
+                        <img class="illustration2" src="images/illustration2.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="form-container">
+                    <div class="form-left form-left-res" style="margin-top: 5vh;">
+                        <form onsubmit="event.preventDefault();document.getElementsByClassName('swiper-button-next')[0].click()">
+                            <div class="label">Required Utilization %</div>
+                            <div class="radio-toolbar" onchange="checkFilled();">
+                                <input type="radio" id="radio25" name="utilization" value="25" required>
+                                <label for="radio25">25%
+                                    <div class="progressGrey"></div>
+                                    <div class="progressBlue"></div>
+                                </label>
+                            
+                                <input type="radio" id="radio50" name="utilization" value="50">
+                                <label for="radio50">50%
+                                    <div class="progressGrey"></div>
+                                    <div class="progressBlue" style="width: 37.5%"></div>
+                                </label>
+                            
+                                <input type="radio" id="radio75" name="utilization" value="75">
+                                <label for="radio75">75%
+                                    <div class="progressGrey"></div>
+                                    <div class="progressBlue" style="width: 56.25%"></div>
+                                </label> 
+
+                                <input type="radio" id="radio100" name="utilization" value="100">
+                                <label for="radio100">100%
+                                    <div class="progressGrey"></div>
+                                    <div class="progressBlue" style="width: 75%"></div>
+                                </label>
+
+                                <input type="radio" id="radioNotSure" name="utilization" value="Not Sure">
+                                <label for="radioNotSure"> 
+                                    <img src="images/thinking.svg" class="notSureImg"></img>
+                                    <div class="notSureLabel">Not Sure</div>
+                                </label>
+                            </div>
+
+                            <div class="label" style="margin-top: 3vh;">Type of Project</div>
+                            <div class="radio-toolbar" onchange="checkFilled();">
+                                <input type="radio" id="projectType1" name="typeOfProject" value="New" required>
+                                <label for="projectType1" style="width: 120px;"> 
+                                    <img src="images/lightBulb.svg" class="radioImg"></img>
+                                    <div class="radioLabel">New</div>
+                                </label>
+
+                                <input type="radio" id="projectType2" name="typeOfProject" value="Iterations to the old project/system">
+                                <label for="projectType2" style="width: 220px;"> 
+                                    <img src="images/edit.svg" class="radioImg"></img>
+                                    <div class="radioLabel">Iterations to the old project/system</div>
+                                </label>
+                                
+                                <input type="radio" id="projectType3" name="typeOfProject" value="Not Sure">
+                                <label for="projectType3" style="width: 140px;"> 
+                                    <img src="images/thinking.svg" class="radioImg"></img>
+                                    <div class="radioLabel">Not Sure</div>
+                                </label>
+                            </div>
+
+                            <div class="label" style="margin-top: 3vh;">Which stage is the project now?</div>
+                            <div class="radio-toolbar" onchange="checkFilled();">
+                                <input type="radio" id="stage1" name="projectStage" value="Awaiting Kick off" required>
+                                <label for="stage1" style="width: 200px;"> 
+                                    <img src="images/clock.svg" class="radioImg"></img>
+                                    <div class="radioLabel">Awaiting Kick off</div>
+                                </label>
+
+                                <input type="radio" id="stage2" name="projectStage" value="Requirement gathering & analysis">
+                                <label for="stage2" style="width: 220px;"> 
+                                    <img src="images/partial-ux.svg" class="radioImg" style="width: 26px;"></img>
+                                    <div class="radioLabel">Requirement gathering & analysis</div>
+                                </label>
+                                
+                                <input type="radio" id="stage3" name="projectStage" value="Implementation or coding">
+                                <label for="stage3" style="width: 200px;"> 
+                                    <img src="images/coding.svg" class="radioImg"></img>
+                                    <div class="radioLabel" style="width: 100px;">Implementation or coding</div>
+                                </label>
+
+                                <input type="radio" id="stage4" name="projectStage" value="Design">
+                                <label for="stage4" style="width: 130px;"> 
+                                    <img src="images/design.svg" class="radioImg"></img>
+                                    <div class="radioLabel">Design</div>
+                                </label>
+
+                                <input type="radio" id="stage5" name="projectStage" value="Testing">
+                                <label for="stage5" style="width: 135px;"> 
+                                    <img src="images/testing.svg" class="radioImg"></img>
+                                    <div class="radioLabel">Testing</div>
+                                </label>
+                                
+                                <input type="radio" id="stage6" name="projectStage" value="Deployment">
+                                <label for="stage6" style="width: 165px;"> 
+                                    <img src="images/deployment.svg" class="radioImg"></img>
+                                    <div class="radioLabel">Deployment</div>
+                                </label>
+
+                                <input type="radio" id="stage7" name="projectStage" value="Maintenance">
+                                <label for="stage7" style="width: 170px;"> 
+                                    <img src="images/maintenance.svg" class="radioImg"></img>
+                                    <div class="radioLabel">Maintenance</div>
+                                </label>
+                            </div>
+                            <button style="right: 20%" id="btn2" class="nxt-btn nxt-grey">Next</button>
+                        </form>
+                    </div>
+                    <div class="illustration-right">
+                        <img class="illustration2" src="images/illustration2.svg">
+                        <img class="illustration3" src="images/illustration3.svg">
+                    </div>
+                </div>
+                <button class="prev-btn" onclick="document.getElementsByClassName('swiper-button-prev')[0].click()">Back</button>
+            </div>
+            <div class="swiper-slide">
+                <form class="res-form" action="temp-form.html" method="post">
+                    <div class="label label-head">What kind of UX Engagement is expected?</div>
+                    <div class="radio-toolbar res-toolbar">
+                        <input type="radio" id="engagementType1" name="typeOfEngagement" value="UX driven product design" onclick="changeSelection('0')" checked>
+                        <label for="engagementType1" style="width: 220px; display: block; margin-top: 30px;"> 
+                            <img class="bookmark" src="images/Recommend.svg">
+                            <img src="images/ux-driven.svg" class="radioImg"></img>
+                            <div class="radioLabel" style="width: 120px;">UX driven product design</div>
+                        </label>
+
+                        <input type="radio" id="engagementType2" name="typeOfEngagement" value="Partial UX involvement" onclick="changeSelection('1')">
+                        <label for="engagementType2" style="width: 220px; display: block;"> 
+                            <img src="images/partial-ux.svg" class="radioImg"></img>
+                            <div class="radioLabel" style="width: 120px;">Partial UX involvement</div>
+                        </label>
+                        
+                        <input type="radio" id="engagementType3" name="typeOfEngagement" value="Minimal UX involvement" onclick="changeSelection('2')">
+                        <label for="engagementType3" style="width: 220px; display: block;"> 
+                            <img src="images/minimal-ux.svg" class="radioImg"></img>
+                            <div class="radioLabel" style="width: 120px;">Minimal UX involvement</div>
+                        </label>
+
+                        <input type="radio" id="engagementType4" name="typeOfEngagement" value="Shadow involvement" onclick="changeSelection('3')">
+                        <label for="engagementType4" style="width: 220px; display: block;"> 
+                            <img src="images/shadow-involve.svg" class="radioImg"></img>
+                            <div class="radioLabel" style="width: 120px;">Shadow involvement</div>
+                        </label>
+                    </div>
+                    <button style="right: 7%" class="nxt-btn" type="submit" onclick="sendData();">Submit</button>
+                </form>
+                <img class="design-circles" src="images/design-circles.svg">
+                <img class="textPopup" src="images/textfield.svg">
+                <img class="illustration2" src="images/illustration2.svg">
+                <button class="prev-btn" style="right: calc(110px + 7%)" onclick="document.getElementsByClassName('swiper-button-prev')[0].click()">Back</button>
+            
+                <div class="engageCon">
+                    <h3 class="engageHead">
+                        UX driven product design
+                    </h3>
+                    <p class="engageText">
+                        Shaping up product from scratch. Involves User research, Root cause analysis, Brainstorming and discovery sessions with users
+                    </p>
+                </div>
+
+                <div style="display: none" class="engageCon">
+                    <h3 class="engageHead">
+                        Partial UX involvement
+                    </h3>
+                    <p class="engageText">
+                        Scope of user research is less. The requirements are already gathered. Need to create the basic screen flow, functionality and visual designs for development
+                    </p>
+                </div>
+
+                <div style="display: none" class="engageCon">
+                    <h3 class="engageHead">
+                        Minimal UX involvement
+                    </h3>
+                    <p class="engageText">
+                        No scope of user research. Requirements are freezed. Just need visual designs as per the branding (Facelift)
+                    </p>
+                </div>
+
+                <div style="display: none" class="engageCon">
+                    <h3 class="engageHead">
+                        Shadow involvement
+                    </h3>
+                    <p class="engageText">
+                        Someone else is doing the UX part.UX CoE to shadow it </p>
+                </div>
+
+            </div>
+            <div class="swiper-button-prev" style="display: none"></div>
+            <div class="swiper-button-next" style="display: none"></div>
+        </div>
+
+        <script src="js/swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1.25,
+                spaceBetween: 50,
+                centeredSlides: true,
+                allowTouchMove: false,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+
+            function myFunction() {
+                var x = document.getElementById("myTopNav");
+                if (x.className === "topNav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topNav";
+                }
+            }
+            
+            function changeSelection(num) {  
+                for(i=0; i<4; i++){
+                    document.getElementsByClassName("engageCon")[i].style.display = "none";
+                    document.getElementsByClassName("engageCon")[i].classList.remove("textPopupAnimate");
+                    document.getElementsByClassName("textPopup")[0].classList.remove("textPopupAnimate");
+                }
+                setTimeout(function(){
+                    document.getElementsByClassName("engageCon")[num].style.display = "block";
+                    document.getElementsByClassName("engageCon")[num].classList.add("textPopupAnimate");
+                    document.getElementsByClassName("textPopup")[0].classList.add("textPopupAnimate");
+                },100)
+                
+            }
+
+            function sendData(){
+                let jsonData = [{
+                    "from" : document.getElementsByClassName('inputs')[0].value, 
+                    "departmentName" : document.getElementsByClassName('inputs')[1].value,
+                    "projectName" : document.getElementsByClassName('inputs')[2].value,
+                    "description" : document.getElementsByClassName('inputs')[3].value,
+                    "targetUsers" : document.getElementsByClassName('inputs')[4].value,
+                    "techPlatform" : document.getElementsByClassName('inputs')[5].value,
+                    "startDate" : document.getElementsByClassName('inputs')[6].value,
+                    "endDate" : document.getElementsByClassName('inputs')[7].value,
+                    "utilization" : document.querySelector('input[name="utilization"]:checked').value,
+                    "typeOfProject" : document.querySelector('input[name="typeOfProject"]:checked').value,
+                    "projectStage" : document.querySelector('input[name="projectStage"]:checked').value,
+                    "typeOfEngagement" : document.querySelector('input[name="typeOfEngagement"]:checked').value
+                }];
+
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "http://localhost:8080/uxrequest-notification", true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.send(JSON.stringify({
+                    value: jsonData
+                }));
+            }
+
+            function checkFilled(){
+                if(document.getElementsByClassName('inputs')[0].value == ''  || 
+                document.getElementsByClassName('inputs')[1].value == ''  ||
+                document.getElementsByClassName('inputs')[2].value == ''  ||
+                document.getElementsByClassName('inputs')[3].value == ''  ||
+                document.getElementsByClassName('inputs')[4].value == ''  ||
+                document.getElementsByClassName('inputs')[5].value == '' ){
+                    document.getElementById("btn1").classList.add('nxt-grey');
+                }
+                else{
+                    document.getElementById("btn1").classList.remove('nxt-grey');
+                }
+
+                if(document.querySelector('input[name="utilization"]:checked').value == '' ||
+                document.querySelector('input[name="typeOfProject"]:checked').value == '' ||
+                document.querySelector('input[name="projectStage"]:checked').value == ''){
+                    document.getElementById("btn2").classList.add('nxt-grey');
+                }
+                else{
+                    document.getElementById("btn2").classList.remove('nxt-grey');
+                }
+            }
+        </script>
+        
+    </body>
+</html>

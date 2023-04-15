@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <link rel="stylesheet" type="text/css" href="css/form.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="icon" type="image/png" href="favicon.png">
+
+        <title>UX Portal</title>
+
+        <style>
+
+            .main-box{
+                position: relative;
+                background: white;
+                width: 80vw;
+                height: 70vh;
+                left: 50%;
+                margin-top: calc(100px + 3%);
+                transform: translateX(-50%);
+                box-shadow: 0px 6px 50px #E4E8EF; 
+                border-radius: 8px; 
+            }
+
+            .success{
+                position: absolute;
+                left: 50%;
+                top: 38%;
+                transform: translateX(-50%) translateY(-50%);
+                width: 300px;
+            }
+
+            .text-area{
+                position: absolute;
+                left: 50%;
+                top: 75%;
+                transform: translateX(-50%) translateY(-50%);
+                text-align: center;
+                width: 80%;
+            }
+
+            .first-text{
+                position: relative;
+                margin-bottom: 20px;
+                font-family: 'Nissan Brand';
+                font-size: 1.8rem;
+                font-weight: normal;
+            }
+
+            .second-text{
+                position: relative;
+                font-family: 'Nissan Brand';
+                font-size: 2rem;  
+                font-weight: Bold;
+                color: #2D71E0;
+                text-decoration: none;
+                margin-left: -20px;
+                width: 270px;
+                cursor: pointer;
+            }
+
+            .illustration2 {
+                position: absolute;
+                right: 0%;
+                width: 30%;
+            }
+
+            .copy-icon{
+                position: relative;
+                width: 35px;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+
+            .tooltip {
+                position: absolute;
+                display: inline-block;
+            }
+
+            .tooltip .tooltiptext {
+                width: 140px;
+                background-color: #555;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 10px;
+                position: absolute;
+                z-index: 1;
+                font-family: 'Nissan Brand';
+                font-size: 1.2rem;  
+                bottom: 120%;
+                left: -120%;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+            .tooltip .tooltiptext::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #555 transparent transparent transparent;
+            }
+
+            .tooltip:hover .tooltiptext {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            @media screen and (max-width: 700px) {
+
+                .first-text{
+                    font-size: 1.4rem;
+                }
+                .second-text{
+                    font-size: 1.5rem;  
+                    margin-top: 5px;
+                    width: 200px;
+                }
+
+            }
+
+            @media screen and (max-width: 500px) {
+
+                .success{
+                    width: 225px;
+                }
+
+                .second-text{
+                    margin-left: 0;
+                }
+
+                .tooltip {
+                    display: block;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin-top: 20px;
+                }
+
+            }
+
+            @media screen and (max-width: 450px) {
+
+                .first-text{
+                    font-size: 1.2rem;
+                }
+                .second-text{
+                    font-size: 1.3rem;  
+                    width: 175px;
+                }
+
+            }
+
+        </style>
+
+        <script>
+            function myFunct() {
+                var copyText = document.getElementById("myInput");
+                copyText.select();
+                copyText.setSelectionRange(0, 99999);
+                document.execCommand("copy");
+                var tooltip = document.getElementById("myTooltip");
+                tooltip.innerHTML = "Copied";
+            }
+            
+            function outFunc() {
+                var tooltip = document.getElementById("myTooltip");
+                tooltip.innerHTML = "Copy Mail Address";
+            }
+        </script>
+
+    </head>
+
+    <body id="touchsurface">
+        <nav class="navbar">
+            <a href="index.html"><img src="images/logo-new3.svg" class="ux-logo"></a>
+            <ul class="topNav" id="myTopNav">
+                <li><a href="index.html#360" id="listNav">360° View</a></li>
+                <li><a href="factory.html">The Factory</a></li>
+                <li><a href="showroom.html">Showroom</a></li>
+                <!-- <li><a href="crew.html">The Crew</a></li> -->
+                <li><a href="form.html" class="active">Request UX</a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars" style="color: #000000;"></i></a></li>
+            </ul>
+        </nav>
+
+        <img src="images/Element01.svg" class="element1">
+        <img src="images/Element02.svg" class="element2">
+            
+        <div class="main-box">
+            <img src="images/success.svg" class="success">
+            <img src="images/illustration2.svg" class="illustration2">
+            <div class="text-area">
+                <div class="first-text">Please send your thoughts to below E-mail Adress</div>
+                <a href="mailto:sidaryan33@gmail.com"><input value="sidaryan33@gmail.com" id="myInput" class="second-text"></a>
+                <div class="tooltip" onmouseout="outFunc()">
+                    <img src="images/copy-icon.svg" onclick={myFunct()} class="copy-icon">
+                    <span class="tooltiptext" id="myTooltip">Copy Mail Address</span>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopNav");
+            if (x.className === "topNav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topNav";
+            }
+        }
+    </script>
+        
+</html>

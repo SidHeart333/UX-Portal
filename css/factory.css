@@ -1,0 +1,1465 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    position: absolute;
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c3002f;
+    border-radius: 10px;
+}
+
+@font-face {
+    font-family: 'Nissan Brand';
+    src: url('../fonts/NissanBrand-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nissan Brand';
+    src: url('../fonts/NissanBrand-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nissan Brand';
+    src: url('../fonts/NissanBrand-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nissan Brand';
+    src: url('../fonts/NissanBrand-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 10px 50px;
+    z-index: 1;
+}
+
+.ux-logo {
+    padding-top: 20px;
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    line-height: 80px;
+    position: relative;
+    padding: 11px 30px;
+    text-decoration: none;
+    color: #000000;
+    transition: .7s;
+    font-family: 'Nissan Brand';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.4rem;
+}
+
+nav ul li a:before {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 1px;
+    height: 2px;
+    transform: translateX(-50%) translateY(-50%) scale(0.2);
+    border-radius: 50%;
+    background: #000000;
+    content: "";
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+nav ul li a.active:before {
+    width: 100px;
+    height: 2px;
+    opacity: 1;
+    border-radius: 4px;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+    transition: 0.3s;
+}
+
+nav ul li a:hover:before {
+    width: 100px;
+    height: 2px;
+    opacity: 1;
+    border-radius: 4px;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+    transition: 0.3s;
+}
+
+
+/* nav ul li a.active {
+    color: #FFFFFF;
+}
+
+nav ul li a:hover {
+    color: #FFFFFF;
+} */
+
+nav ul li a.redActive {
+    color: #FFFFFF;
+    background: #c3002f;
+    border-radius: 4px;
+    padding: 11px 14px;
+    margin-left: 16px;
+}
+
+nav ul li a.icon {
+    display: none;
+}
+
+@media screen and (max-width: 1035px) {
+    nav ul li a {
+        display: none;
+    }
+    nav ul li a.icon {
+        display: block;
+    }
+    nav ul.responsive {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.9);
+    }
+    nav ul.responsive li a {
+        display: block;
+        text-align: center;
+        z-index: 1000;
+    }
+    nav ul.responsive li a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    nav ul.responsive li a.active {
+        color: #FFFFFF;
+    }
+    nav ul.responsive li a:hover {
+        color: #FFFFFF;
+    }
+    nav ul li a:before {
+        transform: translateX(-50%) translateY(-30%) scale(1);
+        border-radius: 0;
+        height: 60px;
+        background: #c3002f;
+        content: "";
+        width: 90%;
+    }
+    nav ul li a.active:before {
+        width: 90%;
+        height: 60px;
+        opacity: 1;
+        transform: translateX(-50%) translateY(-30%) scale(1);
+        transition: 0.3s;
+    }
+    nav ul li a:hover:before {
+        width: 90%;
+        height: 60px;
+        opacity: 1;
+        transform: translateX(-50%) translateY(-30%) scale(1);
+        transition: 0.3s;
+    }
+    nav {
+        padding: 0;
+        z-index: 1000;
+    }
+    .ux-nissan-logo {
+        padding: 30px 50px;
+    }
+    nav ul li a.redActive {
+        color: #000000;
+        background: none;
+    }
+}
+
+.footer {
+    margin-top: 120px;
+    display: block;
+    text-align: center;
+    background: #343434;
+    height: 100px;
+    color: #FFF;
+}
+
+.footerImg{
+    width: 220px;
+    margin: 50px;
+}
+
+.footerText {
+    font-family: 'Nissan Brand';
+    font-weight: 300;
+    font-style: normal;
+    padding-top: 40px;
+    line-height: 20px;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #bee1f2, #ffffff 67%, #ffffff);
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.principles {
+    align-items: center;
+    display: block;
+    font-size: 1.8rem;
+    overflow: hidden;
+    height: 2000px;
+    position: relative;
+}
+
+.subNav {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    transition: .3s;
+    z-index: 999;
+    margin: 120px 0;
+}
+
+.subNav ul {
+    list-style: none;
+    float: left;
+    display: flex;
+}
+
+.subNav ul li {
+    list-style: none;
+}
+
+.subNav ul li a {
+    margin-left: 60px;
+    line-height: 55px;
+    position: relative;
+    padding: 12px 0;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Nissan Brand';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.4rem;
+}
+
+.subNav ul li a:before {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 0px;
+    height: 3px;
+    background-color: #2d71e0;
+    content: "";
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.subNav ul li a.active:before {
+    width: 90px;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%);
+    transition: 0.3s;
+}
+
+.subNav ul li a:hover:before {
+    width: 90px;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%);
+    transition: 0.3s;
+}
+
+.subNav ul li a.active {
+    font-weight: bold;
+}
+
+.subNav ul li a:hover {
+    font-weight: bold;
+}
+
+.sticky {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.orange-bg {
+    width: 43%;
+    float: right;
+}
+
+.paint-car {
+    animation: swipeIn3 2s forwards 0s ease, toAndFro 3s infinite 2s linear;
+    position: absolute;
+    top: calc(5% + 7vw);
+    left: 58%;
+    width: 30%;
+    transition: 1s;
+}
+
+.painter-bot1 {
+    animation: swipeIn2 1s forwards 0s ease;
+    position: absolute;
+    top: calc(5% + 12vw);
+    left: 78%;
+    width: 14%;
+    transition: 1s;
+}
+
+.painter-bot2 {
+    animation: swipeIn1 1s forwards 0s ease;
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    width: 14%;
+    transition: 1s;
+}
+
+@-webkit-keyframes toAndFro {
+    0% {}
+    50% {
+        transform: translateX(-10%) translateY(10%);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes toAndFro {
+    0% {}
+    50% {
+        transform: translateX(-10%) translateY(10%);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@-webkit-keyframes swipeIn1 {
+    0% {
+        transform: translateX(-40%) translateY(-40%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes swipeIn1 {
+    0% {
+        transform: translateX(-40%) translateY(-40%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes swipeIn2 {
+    0% {
+        transform: translateX(40%) translateY(40%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes swipeIn2 {
+    0% {
+        transform: translateX(40%) translateY(40%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes swipeIn3 {
+    0% {
+        transform: translateX(70%) translateY(-70%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes swipeIn3 {
+    0% {
+        transform: translateX(70%) translateY(-70%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+.principles-content {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+}
+
+.principles-h1 {
+    width: 420px;
+    font-size: 2.2rem;
+    font-family: 'Nissan Brand';
+    font-weight: bold;
+    font-style: normal;
+    line-height: 30px;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 14px;
+}
+
+.principles-text {
+    width: 480px;
+    font-size: 1.4rem;
+    font-family: 'Nissan Brand';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 24px;
+    text-align: left;
+    color: #343434;
+}
+
+.principle-h1 {
+    width: 300px;
+    font-size: 2.2rem;
+    font-family: 'Nissan Brand';
+    font-weight: bold;
+    font-style: normal;
+    line-height: 30px;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 14px;
+}
+
+.principle-text {
+    width: 500px;
+    font-size: 1.4rem;
+    font-family: 'Nissan Brand';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 24px;
+    text-align: left;
+    color: #343434;
+}
+
+.principle-con {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 80px 0 60px 0;
+    justify-content: center;
+    grid-auto-rows: minmax(300px, auto);
+}
+
+.bounce1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-column-align: center;
+    justify-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+.bounce2 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-column-align: left;
+    justify-self: left;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+.bounce3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-column-align: center;
+    justify-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+.bounce4 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-column-align: left;
+    justify-self: left;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+.type1 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    -ms-grid-column-align: left;
+    justify-self: left;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+.type2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-column-align: center;
+    justify-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+.type3 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    -ms-grid-column-align: left;
+    justify-self: left;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+.type4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-column-align: center;
+    justify-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+.principle-img {
+    width: 45%;
+    transform: scale(0);
+}
+
+.line {
+    width: 75%;
+    height: 1px;
+    background-color: #bd715f;
+    margin: 40px 0;
+    left: 50%;
+    position: relative;
+    transform: translateX(-52%) translateY(-50%);
+}
+
+.lineText {
+    width: 65%;
+    font-size: 1.8rem;
+    font-family: 'Nissan Brand';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 26px;
+    text-align: center;
+    color: #343434;
+    position: relative;
+    left: 50%;
+    transform: translateX(-52%) translateY(0%);
+}
+
+.green-bg {
+    width: 100%;
+    position: absolute;
+}
+
+.process-content {
+    position: relative;
+    padding: 100px 0 0 50px;
+}
+
+.road {
+    margin-top: 100px;
+    width: 100%;
+    position: absolute;
+}
+
+.car {
+    position: absolute;
+    width: 8%;
+    margin-top: 110px;
+}
+
+.pro-circle1 {
+    position: relative;
+    margin-top: calc(100px + 6.8%);
+    margin-left: 43%;
+    width: 14.5vw;
+    height: 14.5vw;
+    border-radius: 50%;
+    background-color: #72d36d;
+}
+
+.pro-circle2 {
+    position: relative;
+    margin-top: 8.5%;
+    margin-left: 43%;
+    width: 14.5vw;
+    height: 14.5vw;
+    border-radius: 50%;
+    background-color: #769cd9;
+}
+
+.pro-circle3 {
+    position: relative;
+    margin-top: 8.5%;
+    margin-left: 43%;
+    width: 14.5vw;
+    height: 14.5vw;
+    border-radius: 50%;
+    background-color: #e37981;
+}
+
+.pro-circle4 {
+    position: relative;
+    margin-top: 8.5%;
+    margin-left: 43%;
+    width: 14.5vw;
+    height: 14.5vw;
+    border-radius: 50%;
+    background-color: #e6b460;
+}
+
+.pro-num {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5vw;
+    font-family: 'Nissan Brand';
+    font-weight: 300;
+    font-style: normal;
+}
+
+.pro-head {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Nissan Brand';
+    font-weight: bold;
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 2vw;
+}
+
+.vline1 {
+    width: 1px;
+    height: 190px;
+    background-color: #707070;
+    position: absolute;
+    left: 68%;
+    transform: translateX(-50%) translateY(0);
+    opacity: 0;
+    transition: .3s;
+}
+
+.vline2 {
+    width: 1px;
+    height: 220px;
+    background-color: #707070;
+    position: absolute;
+    left: 32%;
+    transform: translateX(-50%) translateY(0);
+    opacity: 0;
+    transition: .3s;
+}
+
+.vline3 {
+    width: 1px;
+    height: 180px;
+    background-color: #707070;
+    position: absolute;
+    left: 68%;
+    transform: translateX(-50%) translateY(0);
+    opacity: 0;
+    transition: .3s;
+}
+
+.vline4 {
+    width: 1px;
+    height: 160px;
+    background-color: #707070;
+    position: absolute;
+    left: 32%;
+    transform: translateX(-50%) translateY(0);
+    opacity: 0;
+    transition: .3s;
+}
+
+.leftSwipe1 {
+    animation: leftSwipe1 1s forwards 0s ease;
+}
+
+.rightSwipe1 {
+    animation: rightSwipe1 1s forwards 0s ease;
+}
+
+.leftSwipe2 {
+    animation: leftSwipe2 1s forwards 0s ease;
+}
+
+.rightSwipe2 {
+    animation: rightSwipe2 1s forwards 0s ease;
+}
+
+@-webkit-keyframes leftSwipe1 {
+    0% {
+        transform: translateX(100px) translateY(calc(-100% - 15px));
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(calc(-100% - 15px));
+        opacity: 1;
+    }
+}
+
+@keyframes leftSwipe1 {
+    0% {
+        transform: translateX(100px) translateY(calc(-100% - 15px));
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(calc(-100% - 15px));
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes rightSwipe1 {
+    0% {
+        transform: translateX(-100px) translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(-100%);
+        opacity: 1;
+    }
+}
+
+@keyframes rightSwipe1 {
+    0% {
+        transform: translateX(-100px) translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(-100%);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes leftSwipe2 {
+    0% {
+        transform: translateX(100px) translateY(calc(-100% - 20px));
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(calc(-100% - 20px));
+        opacity: 1;
+    }
+}
+
+@keyframes leftSwipe2 {
+    0% {
+        transform: translateX(100px) translateY(calc(-100% - 20px));
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(calc(-100% - 20px));
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes rightSwipe2 {
+    0% {
+        transform: translateX(-100px) translateY(calc(-100% - 20px));
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(calc(-100% - 20px));
+        opacity: 1;
+    }
+}
+
+@keyframes rightSwipe2 {
+    0% {
+        transform: translateX(-100px) translateY(calc(-100% - 20px));
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(calc(-100% - 20px));
+        opacity: 1;
+    }
+}
+
+.arrow1 {
+    position: absolute;
+    top: 50%;
+    width: 8px;
+    transform: translateX(-95%) translateY(-50%);
+}
+
+.arrow2 {
+    position: absolute;
+    top: 50%;
+    width: 8px;
+    transform: translateX(5%) translateY(-50%);
+}
+
+.vline1-h1 {
+    position: absolute;
+    top: 23%;
+    width: 280px;
+    transform: translateX(10%) translateY(-50%);
+    font-size: 2rem;
+    line-height: 25px;
+    font-family: 'Nissan Brand';
+    font-weight: bold;
+    font-style: normal;
+    color: #343434;
+}
+
+.vline1-h2 {
+    position: absolute;
+    top: 54%;
+    width: 280px;
+    transform: translateX(10%) translateY(-50%);
+    font-size: 1.5rem;
+    line-height: 20px;
+    font-family: 'Nissan Brand';
+    font-weight: bold;
+    font-style: normal;
+    color: #343434;
+}
+
+.vline1-p {
+    position: absolute;
+    top: 68%;
+    width: 280px;
+    transform: translateX(10%) translateY(-50%);
+    margin-top: 16px;
+}
+
+.vline1-p>div {
+    font-size: 1.2rem;
+    font-family: 'Nissan Brand';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 18px;
+    color: #343434;
+}
+
+.vline2-h1 {
+    position: absolute;
+    top: 20%;
+    width: 300px;
+    transform: translateX(-105%) translateY(-50%);
+    font-size: 2rem;
+    line-height: 25px;
+    font-family: 'Nissan Brand';
+    font-weight: bold;
+    font-style: normal;
+    color: #343434;
+}
+
+.vline2-h2 {
+    position: absolute;
+    top: 47%;
+    width: 300px;
+    transform: translateX(-105%) translateY(-50%);
+    font-size: 1.5rem;
+    line-height: 20px;
+    font-family: 'Nissan Brand';
+    font-weight: bold;
+    font-style: normal;
+    color: #343434;
+}
+
+.vline2-p {
+    position: absolute;
+    top: 69%;
+    width: 300px;
+    transform: translateX(-105%) translateY(-50%);
+    margin-top: 16px;
+}
+
+.vline2-p>div {
+    font-size: 1.2rem;
+    font-family: 'Nissan Brand';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 18px;
+    color: #343434;
+}
+
+.tick {
+    width: 5%;
+    margin-right: 5px;
+    transform: translateX(0%) translateY(20%);
+}
+
+.end-line {
+    width: 85%;
+    height: 1px;
+    background-color: #bd715f;
+    left: 50%;
+    margin: 20px 0;
+    position: relative;
+    transform: translateX(-50%) translateY(0%);
+}
+
+.leftSide {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    grid-area: leftSide;
+}
+
+.rightSide {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 3;
+    grid-column: 3;
+    grid-area: rightSide;
+}
+
+.end-content {
+    display: -ms-grid;
+    display: grid;
+    grid-template-areas: 'leftSide rightSide';
+    grid-gap: 30%;
+    padding: 30px 0;
+    position: relative;
+    width: 70%;
+    left: 50%;
+    grid-auto-columns: minmax(120px, auto);
+    transform: translateX(-50%) translateY(0%);
+}
+
+.end-h1 {
+    font-size: 2rem;
+    font-family: 'Nissan Brand';
+    font-weight: bold;
+    font-style: normal;
+    color: #343434;
+}
+
+.end-p {
+    font-size: 1.5rem;
+    font-family: 'Nissan Brand';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 20px;
+    color: #343434;
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 1020px) {
+    .principles {
+        height: 1800px;
+    }
+    .principles-text {
+        width: 430px;
+    }
+    .bounce1 {
+        grid-area: bounce1;
+        -ms-grid-column-align: center;
+        justify-self: center;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+    .bounce2 {
+        grid-area: bounce2;
+        -ms-grid-column-align: center;
+        justify-self: center;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+    .bounce3 {
+        grid-area: bounce3;
+        -ms-grid-column-align: center;
+        justify-self: center;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+    .bounce4 {
+        grid-area: bounce4;
+        -ms-grid-column-align: center;
+        justify-self: center;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+    .type1 {
+        grid-area: type1;
+        -ms-grid-column-align: center;
+        justify-self: center;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+    .type2 {
+        grid-area: type2;
+        -ms-grid-column-align: center;
+        justify-self: center;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+    .type3 {
+        grid-area: type3;
+        -ms-grid-column-align: center;
+        justify-self: center;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+    .type3 {
+        grid-area: type4;
+        -ms-grid-column-align: center;
+        justify-self: center;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+    .principle-con {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-rows: auto 50px auto 50px auto 50px auto 50px auto 50px auto 50px auto;
+        grid-template: 'bounce1' 'type1' 'bounce2' 'type2' 'bounce3' 'type3' 'bounce4' 'type4';
+        grid-row-gap: 50px;
+        justify-content: center;
+    }
+    .principle-img {
+        width: 30%;
+        opacity: 0;
+        transform: scale(0);
+    }
+    .principles {
+        height: 2350px;
+    }
+    .paint-car {
+        top: calc(4% + 7vw);
+        left: 60%;
+        width: 30%;
+        transition: 1s;
+    }
+    .painter-bot1 {
+        top: calc(4% + 12vw);
+        left: 80%;
+        width: 14%;
+        transition: 1s;
+    }
+    .painter-bot2 {
+        top: 4%;
+        left: 62%;
+        width: 14%;
+        transition: 1s;
+    }
+    .line {
+        width: 65%;
+    }
+    .lineText {
+        width: 55%;
+    }
+    .road {
+        display: none;
+    }
+    .car {
+        display: none;
+    }
+    .pro-circle1 {
+        margin-top: calc(50px + 10%);
+        margin-left: 20%;
+        width: 170px;
+        height: 170px;
+        transition: 0.5s;
+    }
+    .pro-circle2 {
+        margin-left: 60%;
+        margin-top: 15%;
+        width: 170px;
+        height: 170px;
+    }
+    .pro-circle3 {
+        margin-left: 20%;
+        margin-top: 15%;
+        width: 170px;
+        height: 170px;
+        transition: 0.5s;
+    }
+    .pro-circle4 {
+        margin-left: 60%;
+        margin-top: 15%;
+        width: 170px;
+        height: 170px;
+    }
+    .pro-num {
+        font-size: 40px;
+    }
+    .pro-head {
+        font-size: 22px;
+    }
+    .vline1 {
+        left: 50%;
+    }
+    .vline2 {
+        left: 50%;
+    }
+    .vline3 {
+        left: 50%;
+    }
+    .vline4 {
+        left: 50%;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .bounce1 {
+        -ms-grid-row: 1;
+        grid-row: 1;
+        -ms-grid-column: 1;
+        grid-column: 1;
+    }
+    .bounce2 {
+        -ms-grid-row: 5;
+        grid-row: 5;
+        -ms-grid-column: 1;
+        grid-column: 1;
+    }
+    .bounce3 {
+        -ms-grid-row: 9;
+        grid-row: 9;
+        -ms-grid-column: 1;
+        grid-column: 1;
+    }
+    .bounce4 {
+        -ms-grid-row: 13;
+        grid-row: 13;
+        -ms-grid-column: 1;
+        grid-column: 1;
+    }
+    .type1 {
+        -ms-grid-row: 3;
+        grid-row: 3;
+        -ms-grid-column: 1;
+        grid-column: 1;
+    }
+    .type2 {
+        -ms-grid-row: 7;
+        grid-row: 7;
+        -ms-grid-column: 1;
+        grid-column: 1;
+    }
+    .type3 {
+        -ms-grid-row: 11;
+        grid-row: 11;
+        -ms-grid-column: 1;
+        grid-column: 1;
+    }
+    .type3 {
+        -ms-grid-row: 15;
+        grid-row: 15;
+        -ms-grid-column: 1;
+        grid-column: 1;
+    }
+}
+
+@media screen and (max-width: 842px) {
+    .principles-h1 {
+        width: 400px;
+    }
+    .principles-text {
+        width: 400px
+    }
+    .paint-car {
+        top: calc(3% + 7vw);
+        left: 60%;
+        width: 30%;
+        transition: 1s;
+    }
+    .painter-bot1 {
+        top: calc(3% + 12vw);
+        left: 80%;
+        width: 14%;
+        transition: 1s;
+    }
+    .painter-bot2 {
+        top: 3%;
+        left: 62%;
+        width: 14%;
+        transition: 1s;
+    }
+    .line {
+        width: 75%;
+    }
+    .lineText {
+        width: 65%;
+    }
+    .pro-circle1 {
+        margin-left: 15%;
+    }
+    .pro-circle3 {
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .pro-circle1 {
+        margin-top: calc(50px + 5%);
+        margin-left: 50%;
+        transform: translateX(-50%) translateY(0%);
+    }
+    .pro-circle2 {
+        margin-left: 50%;
+        transform: translateX(-50%) translateY(0%);
+        margin-top: 260px;
+    }
+    .pro-circle3 {
+        margin-left: 50%;
+        transform: translateX(-50%) translateY(0%);
+        margin-top: 300px;
+    }
+    .pro-circle4 {
+        margin-left: 50%;
+        transform: translateX(-50%) translateY(0%);
+        margin-top: 260px;
+    }
+    .vline1 {
+        opacity: 1;
+        left: 50%;
+        margin-top: 30px;
+        width: 0;
+    }
+    .vline2 {
+        opacity: 1;
+        left: 50%;
+        margin-top: 30px;
+        width: 0;
+    }
+    .vline3 {
+        opacity: 1;
+        left: 50%;
+        margin-top: 30px;
+        width: 0;
+    }
+    .vline4 {
+        opacity: 1;
+        left: 50%;
+        margin-top: 30px;
+        width: 0;
+    }
+    .arrow1 {
+        opacity: 0;
+    }
+    .arrow2 {
+        opacity: 0;
+    }
+    .vline1-h1 {
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .vline1-h2 {
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .vline1-p {
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .vline2-h1 {
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .vline2-h2 {
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .vline2-p {
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .end-line {
+        width: 85%;
+        height: 1px;
+        background-color: #bd715f;
+        left: 50%;
+        margin: 20px 0;
+        position: relative;
+        transform: translateX(-50%) translateY(0%);
+    }
+    .end-content {
+        grid-template-areas: 'leftSide' 'rightSide';
+        grid-gap: 40px 0;
+    }
+    .leftSide {
+        -ms-grid-row: 1;
+        grid-row: 1;
+        -ms-grid-column: 1;
+        grid-column: 1;
+    }
+    .rightSide {
+        -ms-grid-row: 3;
+        grid-row: 3;
+        -ms-grid-column: 1;
+        grid-column: 1;
+    }
+}
+
+@media screen and (max-width: 642px) {
+    .principle-text {
+        width: 96%;
+    }
+    .paint-car {
+        top: calc(1.5% + 7vw);
+        left: 62%;
+        width: 30%;
+        transition: 1s;
+    }
+    .painter-bot1 {
+        top: calc(1.5% + 12vw);
+        left: 82%;
+        width: 14%;
+        transition: 1s;
+    }
+    .painter-bot2 {
+        top: 1.5%;
+        left: 64%;
+        width: 14%;
+        transition: 1s;
+    }
+    .line {
+        width: 90%;
+    }
+    .lineText {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 474px) {
+    .orange-bg {
+        width: 53%;
+    }
+    .paint-car {
+        top: calc(2% + 7vw);
+        left: 56%;
+        width: 30%;
+        transition: 1s;
+    }
+    .painter-bot1 {
+        top: calc(2% + 12vw);
+        left: 76%;
+        width: 14%;
+        transition: 1s;
+    }
+    .painter-bot2 {
+        top: 2%;
+        left: 58%;
+        width: 14%;
+        transition: 1s;
+    }
+    .subNav ul li a {
+        margin-left: 40px;
+    }
+    .subNav {
+        margin: 140px 0;
+    }
+    .principles {
+        height: 2600px;
+    }
+    .principles-content {
+        position: absolute;
+        top: 220px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .process-content {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .principles-h1 {
+        width: 300px;
+    }
+    .principles-text {
+        width: 320px;
+        text-align: left;
+    }
+    .principle-img {
+        width: 50%;
+    }
+    .line {
+        width: 100%;
+    }
+    .lineText {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .process-content {
+        left: 47%;
+        transform: translateX(-50%);
+    }
+    .line {
+        width: 90%;
+    }
+    .lineText {
+        width: 80%;
+    }
+}

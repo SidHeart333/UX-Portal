@@ -1,0 +1,506 @@
+.container {
+  align-items: center;
+  display: block;
+  font-size: 1.8rem;
+  overflow: hidden;
+  height: 2750px;
+  background: url(../images/360-bg.png) no-repeat bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.circle-1{
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 480px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.circle-1:after{
+  border: #f7bc14 1.5px solid;
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 50%;
+}
+
+.circle-2{
+  position: absolute;
+  top:30%;
+  left: 68%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background-color: #2d71e0;
+  border-radius: 50%;
+}
+
+.circle-2:after{
+  border: #2d71e0 1.5px solid;
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 50%;
+}
+
+.circle-3{
+  position: absolute;
+  top:44%;
+  left: 38%;
+  transform: translate(-50%, -70%);
+  width: 400px;
+  height: 400px;
+  background-color: #b72d2d;
+  border-radius: 50%;
+}
+
+.circle-3:after{
+  border: #b72d2d 1.5px solid;
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 50%;
+}
+
+.circle-img{
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 100px;
+}
+
+.circle-h1{
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  font-family: 'Nissan Brand';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2.4rem;
+  line-height: 20px;
+  text-align: center;
+  color: #2d71e0;
+}
+
+.circle-p{
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  font-family: 'Nissan Brand';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 22px;
+  text-align: center;
+  color: #000000;
+}
+
+.circle-img-sub{
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+}
+
+.circle-h1-sub{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  font-family: 'Nissan Brand';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2.4rem;
+  line-height: 20px;
+  text-align: center;
+  color: #FFF;
+}
+
+.circle-p-sub{
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  font-family: 'Nissan Brand';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 22px;
+  text-align: center;
+  color: #FFF;
+}
+
+.spot{
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.protractor{
+  position: absolute;
+  top: 50vh;
+  width: 500px;
+  transform: translate(-60%, -50%);
+  opacity: 0.75;
+}
+
+.futureSection{
+  position: absolute;
+  top: 54%;
+  left: 25%;
+}
+
+.futureText{
+  width: 50%;
+  font-family: 'Nissan Brand';
+  font-weight: 300;
+  font-style: normal;
+  line-height: 36px;
+  text-align: left;
+  color: #FFFFFF;
+  font-size: 2.6rem;
+}
+
+.boxCon{
+  width:100%;
+  max-width:700px;
+}
+
+.fourBox{
+  display: inline-block;
+  margin: 22px 22px 0 0;
+  width: 320px;
+  height: 160px;
+  border: #44b13f 1.5px solid;
+  border-radius: 5px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.boxImg{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+}
+
+.boxText{
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 83%;
+  font-size: 1.6rem;
+  font-family: 'Nissan Brand';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+}
+
+.expSection{
+  position: absolute;
+  top: 75%;
+  left: 25%;
+}
+
+.expText{
+  font-family: 'Nissan Brand';
+  font-weight: 300;
+  font-style: normal;
+  line-height: 36px;
+  text-align: left;
+  color: #FFFFFF;
+  font-size: 2.6rem;
+}
+
+.expCircle{
+  margin: 22px 0 10px 0px;
+  width: 150px;
+  height: 150px;
+  border-radius: 500px;
+  background-color: #2d71e0;
+}
+
+.expCon{
+  width:100%;
+  max-width:800px;
+  text-align: center;
+}
+
+.expSubCon{
+  display: inline-block;
+  width: 400px;
+  max-width: 260px;
+  text-align: center;
+}
+
+.expImg{
+  position: relative;
+  top: 48%;
+  left: 49%;
+  transform: translate(-90%, -45%);
+  width: 80px;
+  height: 80px;
+}
+
+.expSubText{
+  width: 60%;
+  font-family: 'Nissan Brand';
+  font-weight: 300;
+  font-style: normal;
+  line-height: 20px;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 1056px) {
+
+  .circle-1{
+    top: 12%;
+    left: 50%;
+  }
+
+  .circle-2{
+    position: relative;
+    top: 31%;
+    left: 50%;
+  }
+
+  .circle-3{
+    position: relative;
+    top: 37%;
+    left: 50%;
+  }
+
+  .futureSection{
+    top: 59%;
+    left: 15%;
+  }
+
+  .expSection{
+    top: 78%;
+    left: 15%;
+  }
+
+  .spot, .protractor{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 932px) {
+
+  .container{
+    height: 3200px;
+  }
+
+  .circle-1{
+    top: 11%;
+    left: 50%;
+  }
+
+  .circle-2{
+    position: relative;
+    top: 28%;
+    left: 50%;
+  }
+
+  .circle-3{
+    position: relative;
+    top: 34%;
+    left: 50%;
+  }
+
+  .futureSection{
+    top: 54%;
+    left: 15%;
+  }
+
+  .futureText{
+    width: 60%;
+  }
+
+  .expSection{
+    top: 72%;
+    left: 15%;
+  }
+
+}
+
+@media screen and (max-width: 824px) {
+
+  .container{
+    height: 3500px;
+  }
+
+  .circle-1{
+    top: 10%;
+    left: 50%;
+  }
+
+  .circle-2{
+    position: relative;
+    top: 25%;
+    left: 50%;
+  }
+
+  .circle-3{
+    position: relative;
+    top: 30%;
+    left: 50%;
+  }
+
+  .futureSection{
+    top: 48%;
+    left: 25%;
+  }
+
+  .futureText{
+    width: 75%;
+  }
+
+  .expSection{
+    top: 75%;
+    left: 15%;
+  }
+
+}
+
+@media screen and (max-width: 624px) {
+
+  .futureSection{
+    top: 49%;
+    left: 20%;
+  }
+
+  .futureText{
+    width: 85%;
+  }
+
+  .boxCon{
+    margin-left: 3%; 
+  }
+
+  .expSection{
+    top: 76%;
+    left: 15%;
+  }
+
+  .expText{
+    width: 90%;
+  }
+
+  .expCircle{
+    width: 120px;
+    height: 120px;
+  }
+
+  .expSubCon{
+    display: inline-block;
+    width: 300px;
+    max-width: 200px;
+    text-align: center;
+  }
+
+  .expImg{
+    transform: translate(-85%, -50%);
+    width: 70px;
+    height: 70px;
+  }
+
+}
+
+@media screen and (max-width: 483px) {
+
+  .container{
+    height: 4000px;
+  }
+
+  .circle-1{
+    top: 9%;
+    left: 50%;
+  }
+
+  .circle-2{
+    position: relative;
+    top: 22.5%;
+    left: 50%;
+  }
+
+  .circle-3{
+    position: relative;
+    top: 27%;
+    left: 50%;
+  }
+
+  .futureSection{
+    top: 44%;
+    left: 13%;
+  }
+
+  .boxCon{
+    margin-left: 0; 
+  }
+
+  .futureText{
+    width: 95%;
+  }
+
+  .expSection{
+    top: 68%;
+    left: 15%;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .circle-p{
+    width: 75%;
+  }
+
+  .futureSection{
+    left: 10%;
+  }
+
+  .futureText{
+    width: 90%;
+  }
+
+  .expSection{
+    top: 68%;
+    left: 10%;
+  }
+
+  .expCon{
+    margin-left: 6%;
+  }
+
+}

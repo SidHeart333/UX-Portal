@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/showroom.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <title>UX Portal</title>
+</head>
+
+<body id="touchsurface">
+    <nav class="navbar">
+        <a href="index.html"><img src="images/logo-new3.svg" class="ux-logo"></a>
+        <ul class="topNav" id="myTopNav">
+            <li><a href="index.html#360" id="listNav">360° View</a></li>
+            <li><a href="factory.html">The Factory</a></li>
+            <li><a href="#" class="active">Showroom</a></li>
+            <!-- <li><a href="crew.html">The Crew</a></li> -->
+            <li><a href="form.html" class="redActive">Request UX</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars" style="color: #FFFFFF;"></i></a></li>
+        </ul>
+    </nav>
+    <section class="head">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide mob1">
+                    <div class="tooltip">
+                        <h1>Amazon<span>Redesign</span></h1>
+                        <h2>Redesign</h2>
+                        <p>This redesign case study was thought and executed by me for a conceptual project. By this redesign, I would try to pinpoint some of the areas which can be improved concerning user experience.</p>
+                        <button><a href="#">Check it out</a></button>
+                    </div>
+                </div>
+                <div class="swiper-slide mac1">
+                    <div class="tooltip">
+                        <h1>Data<span>Repository</span></h1>
+                        <h2>Management Tool</h2>
+                        <p>A system where we could manage all the data and get the data just by search for known parameters. The system should also manage the agreement and authentication for those data.</p>
+                        <button><a href="#">Check it out</a></button>
+                    </div>
+                </div>
+                <div class="swiper-slide mob2">
+                    <div class="tooltip">
+                        <h1>Acci<span>Detect</span></h1>
+                        <h2>SOS App</h2>
+                        <p>This app turns on SOS in-case it's user has unfortunately met an accident. It uses Bluetooth and sensors in the phone and vehicle to detect a collision and alerts the nearest Hospital and the user's emergency contacts.</p>
+                        <button><a href="#">Check it out</a></button>
+                    </div>
+                </div>
+                <div class="swiper-slide mac2">
+                    <div class="tooltip">
+                        <h1>Content<span>Marketplace</span></h1>
+                        <h2>Freelancer Managerment Tool</h2>
+                        <p>A system which allows freelancers to get onboarded on the platform as content creators and reviewers. Creators can accept or reject workorders and the system will provide all the tools required to create any kind of questions.</p>
+                        <button><a href="#">Check it out</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./images/turnTable.svg" class="turnTable">
+    </section>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <section class="insight sec bottom-desc-active">
+        <h1>Amazon<span>Redesign</span></h1>
+        <h2>Redesign</h2>
+        <p>This redesign case study was thought and executed by me for a conceptual project. By this redesign, I would try to pinpoint some of the areas which can be improved concerning user experience.</p>
+        <button><a href="#">Check it out</a></button>
+    </section>
+
+    <section class="vup sec">
+        <h1>Data<span>Repository</span></h1>
+        <h2>Management Tool</h2>
+        <p>A system where we could manage all the data and get the data just by search for known parameters. The system should also manage the agreement and authentication for those data.</p>
+        <button><a href="#">Check it out</a></button>
+    </section>
+
+    <section class="kpi sec">
+        <h1>Acci<span>Detect</span></h1>
+        <h2>SOS App</h2>
+        <p>This app turns on SOS in-case it's user has unfortunately met an accident. It uses Bluetooth and sensors in the phone and vehicle to detect a collision and alerts the nearest Hospital and the user's emergency contacts.</p>
+        <button><a href="#">Check it out</a></button>
+    </section>
+
+    <section class="vup sec">
+        <h1>Content<span>Marketplace</span></h1>
+        <h2>Freelancer Managerment Tool</h2>
+        <p>A system which allows freelancers to get onboarded on the platform as content creators and reviewers. Creators can accept or reject workorders and the system will provide all the tools required to create any kind of questions.</p>
+        <button><a href="#">Check it out</a></button>
+    </section>
+
+    <script src="js/swiper.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 3,
+            spaceBetween: -400,
+            zoom: true,
+            slideToClickedSlide: true,
+            coverflowEffect: {
+                slideShadows: false
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            keyboard: {
+                enabled: true,
+            },
+            mousewheel: {
+                invert: true,
+            },
+            breakpoints: {
+                1400: {
+                    slidesPerView: 2,
+                    spaceBetween: -380
+                },
+                1200: {
+                    slidesPerView: 2,
+                    spaceBetween: -300
+                },
+                850: {
+                    slidesPerView: 1,
+                    spaceBetween: -300
+                },
+                600: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                }
+            },
+            on: {
+                slideChange: function() {
+                    console.log(this.activeIndex);
+
+                    var bottom_elements = document.getElementsByClassName("sec");
+                    for (var i = 0; i < bottom_elements.length; i++) {
+                        bottom_elements[i].classList.remove('bottom-desc-active');
+                    }
+
+                    bottom_elements[this.activeIndex].classList.add('bottom-desc-active');
+                }
+            }
+        });
+    </script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopNav");
+            if (x.className === "topNav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topNav";
+            }
+        }
+    </script>
+    
+</body>
+
+</html>
