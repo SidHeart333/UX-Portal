@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="78" height="138" viewBox="0 0 78 138">
+    <defs>
+        <style>
+            .cls-1{fill:#fff;stroke:#fff}.cls-2{fill:#c3002f}.cls-3{stroke:none}.cls-4{fill:none}.cls-5{filter:url(#Rectangle_62)}
+        </style>
+        <filter id="Rectangle_62" width="78" height="138" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Left" transform="translate(-827 -953)">
+        <g class="cls-5" transform="translate(827 953)">
+            <g id="Rectangle_62-2" class="cls-1" data-name="Rectangle 62">
+                <path d="M0 0a60 60 0 0 1 60 60 60 60 0 0 1-60 60V0z" class="cls-3" transform="translate(9 6)"/>
+                <path d="M.8.5a58.7 58.7 0 0 1 58.7 58.7v1.6A58.7 58.7 0 0 1 .8 119.5a.3.3 0 0 1-.295-.295V.8A.3.3 0 0 1 .8.5z" class="cls-4" transform="translate(9 6)"/>
+            </g>
+        </g>
+        <path id="Arrow-Left" d="M54.552 13.929L68.043.443a1.515 1.515 0 0 1 2.145 2.14L57.766 15l12.42 12.416a1.515 1.515 0 0 1-2.145 2.142L54.55 16.071a1.528 1.528 0 0 1 .002-2.142z" class="cls-2" transform="translate(794.887 1004)"/>
+    </g>
+</svg>
